@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz dia 🐾</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game">
+    <div class="stars"></div>
+
+    <section id="intro" class="screen">
+      <button id="catButton" class="cat-button" aria-label="Hacer clic al gatito">
+        <span class="cat">🐈</span>
+        <span class="paw">🐾</span>
+      </button>
+      <p class="hint">Haz clic en el gatito...</p>
+    </section>
+
+    <div id="modalBackdrop" class="modal-backdrop hidden">
+      <section id="quizModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-top">
+          <span id="counter">Pregunta 1 de 3</span>
+          <button id="closeModal" class="close" aria-label="Cerrar">×</button>
+        </div>
+        <div id="hangman" class="hangman" aria-label="Progreso de errores">
+          <div class="rope"></div><div class="head"></div><div class="body"></div>
+          <div class="arm left"></div><div class="arm right"></div>
+          <div class="leg left"></div><div class="leg right"></div>
+        </div>
+        <h1 id="question"></h1>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+    </div>
+
+    <section id="failure" class="end-screen hidden">
+      <div class="sad-cat">😿</div>
+      <h2>Usted perdió, mi Lic. 😔</h2>
+      <p>El gatito hizo lo que pudo...</p>
+      <button id="retry" class="retry">Intentar otra vez</button>
+    </section>
+
+    <section id="success" class="end-screen success hidden">
+      <canvas id="celebration"></canvas>
+      <div class="flowers">🌹 🌹 💐 🌹 🌹</div>
+      <div class="happy-cat">😸</div>
+      <h2>¡LO LOGRÓ, MI LIC.! ✨</h2>
+      <p>Usted mi Lic. no es espectadora ;)</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
